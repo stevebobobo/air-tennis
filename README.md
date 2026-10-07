@@ -60,3 +60,7 @@ Swing your phone like a racket. Built with MIT App Inventor.
 
 加速度感測器（判斷揮拍）、音效、計時器、文字語音轉換器；第 4 版另外用到網路元件和微型資料庫。
 擊球聲是用程式合成的，沒有使用外部音效檔。
+
+## 授權 License
+
+[MIT License](LICENSE)：可以自由使用、修改、散布，保留著作權聲明即可。
