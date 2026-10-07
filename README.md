@@ -18,14 +18,15 @@ Swing your phone like a racket. Built with MIT App Inventor.
 4. 不想打了就按「✋ 不打了」。
 5. 揮得太急，手機會提醒「慢一點，等球過來再打」。
 
-## 兩個版本
+## 三個版本
 
 | 版本 | 檔案 | 適合 |
 |------|------|------|
 | 第 3 版 | `Air_Tennis_v3c.aia` | 只用一支手機玩，也適合拿來學積木怎麼寫 |
 | 第 4 版 | `Air_Tennis_v4c.aia` | 多一個電腦大螢幕，旁邊的人可以一起看比賽 |
+| 雙人版 | `Air_Tennis_2P.aia` | 兩支手機對打，電腦當裁判並顯示比分 |
 
-兩版的玩法相同。第 4 版不填電腦 IP 時，就和第 3 版一樣可以單機玩。
+第 3、4 版的玩法相同。第 4 版不填電腦 IP 時，就和第 3 版一樣可以單機玩。
 
 ## 安裝
 
@@ -47,13 +48,35 @@ Swing your phone like a racket. Built with MIT App Inventor.
 
 球聲和語音是從手機發出的，電腦不會出聲。
 
+## 雙人版：兩支手機對打
+
+![雙人對打畫面](docs/screen_2p.jpg)
+
+需要兩支 Android 手機和一台電腦，三者在同一個網路。電腦是裁判：它決定誰發球、現在輪到誰、誰得分。
+
+1. 電腦照上一節的方式執行大螢幕程式。
+2. 兩支手機都安裝 `Air_Tennis_2P.apk`。
+3. 一支維持「我是 1 號球員」，另一支點一下按鈕切成 2 號。
+4. 兩支都輸入電腦 IP，按「🎾 加入比賽」。兩人都加入後自動開始。
+
+規則：
+
+- 手機說「你發球」的人揮拍發球，每 2 分換人發球。
+- 球飛到你這邊時，手機會震動並說「打」，這時揮拍才算。還沒輪到你時揮拍不算。
+- 球到了之後 1.5 秒內沒揮到，對方得 1 分。
+- 先得 5 分的人獲勝，之後任一方揮拍就再來一局。
+- 來回越多拍，球飛得越快。
+
+想改分數或時間，修改 `screen/tennis_screen.py` 最上面的 `WIN`、`FLIGHT`、`WINDOW` 三個數字。
+
 ## 檔案說明
 
 | 檔案 | 內容 |
 |------|------|
 | `Air_Tennis_v3c.aia` | 第 3 版 App Inventor 專案 |
 | `Air_Tennis_v4c.aia` | 第 4 版 App Inventor 專案 |
-| `screen/tennis_screen.py` | 電腦大螢幕程式（Python，不需要安裝其他套件） |
+| `Air_Tennis_2P.aia` | 雙人版 App Inventor 專案 |
+| `screen/tennis_screen.py` | 電腦大螢幕程式，也是雙人版的裁判（Python，不需要安裝其他套件） |
 | `screen/start_screen.bat` | 啟動大螢幕並開啟瀏覽器 |
 
 ## 使用到的元件
